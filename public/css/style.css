@@ -1,0 +1,25 @@
+.padding-tp-0 {
+
+padding-top: 0;
+
+}
+
+fieldset {
+    padding: 20px;
+    padding-bottom: 5vmin;
+    margin-bottom: 5vmin;
+}
+
+fieldset legend.title {
+    padding: 0 8px;
+}
+
+.field.is-grouped.justify-center {
+
+    justify-content: center;
+
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin: 3px 3px 3px 4px;
+}
