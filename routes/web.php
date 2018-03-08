@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/questionnaire-form', 'QuestionnaireController@index');
+Route::get('/', 'QuestionnaireController@index');
 Route::post('/questionnaire_send', 'QuestionnaireController@store');
