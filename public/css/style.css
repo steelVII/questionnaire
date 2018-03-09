@@ -23,3 +23,13 @@ fieldset legend.title {
 input[type="checkbox"], input[type="radio"] {
     margin: 3px 3px 3px 4px;
 }
+
+@media only screen and (max-width:480px) {
+
+.navbar-item.button.is-info.is-outlined {
+
+    display: none;
+
+}
+
+}

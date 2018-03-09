@@ -273,7 +273,7 @@
                         <button class="button is-link is-large">Submit</button>
                     </div>
                     <div class="control">
-                        <button class="button is-danger is-large">Cancel</button>
+                    <a href="{{ url('/') }}" class="button is-danger is-large">Cancel</a>
                     </div>
                 </div>
             </div>
