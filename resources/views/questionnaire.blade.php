@@ -179,23 +179,23 @@
             <div class="columns">
                 <div class="field column">
                     <label for="" class="label">List any important words that you want people to associate with your company image/brand:</label>
-                    <div class="control"><textarea name="audience[keywords][]" id="" class="textarea"></textarea></div>
+                    <div class="control"><textarea name="audience[keywords]" id="" class="textarea"></textarea></div>
                 </div>
             </div>
             <div class="columns">
                 <div class="field column">
                     <label for="" class="label">Target Audience: Describe what kind of users you intend to attract to your site:</label>
-                    <div class="control"><textarea name="audience[target][]" id="" class="textarea"></textarea></div>
+                    <div class="control"><textarea name="audience[target]" id="" class="textarea"></textarea></div>
                 </div>
             </div>
             <div class="columns">
                 <div class="field column">
                     <label for="" class="label">Where/how do people learn about your company/product/service(s)?</label>
-                    <div class="control"><textarea name="audience[learn][]" id="" class="textarea"></textarea></div>
+                    <div class="control"><textarea name="audience[learn]" id="" class="textarea"></textarea></div>
                 </div>
                 <div class="field column">
                     <label for="" class="label">Why does your target audience need this website?</label>
-                    <div class="control"><textarea name="audience[why][]" id="" class="textarea"></textarea></div>
+                    <div class="control"><textarea name="audience[why]" id="" class="textarea"></textarea></div>
                 </div>
             </div>
         </fieldset>
@@ -239,28 +239,28 @@
             <div class="columns">
                 <div class="field column is-half">
                     <label for="" class="label">When does your website need to be completed and made available to the public?</label>
-                    <div class="control"><input name="feature[completion_date][]" type="text" class="input" placeholder="31/12/2018"></div>
+                    <div class="control"><input name="feature[completion_date]" type="text" class="input" placeholder="31/12/2018"></div>
                 </div>
             </div>
             <div class="columns">
                 <div class="field column">
                     <label class="label">Will you want your site to be updated regularly?</label>
-                    <label for="updated_yes" class="radio"><input type="radio" name="feature[updated_regularly][]" id="updated_yes" value="Yes">Yes</label>
-                    <label for="updated_no" class="radio"><input type="radio" name="feature[updated_regularly][]" id="updated_no" value="No">No</label>
-                    <label for="updated_maybe" class="radio"><input type="radio" name="feature[updated_regularly][]" id="updated_maybe" value="Maybe">Maybe</label>
+                    <label for="updated_yes" class="radio"><input type="radio" name="feature[updated_regularly]" id="updated_yes" value="Yes">Yes</label>
+                    <label for="updated_no" class="radio"><input type="radio" name="feature[updated_regularly]" id="updated_no" value="No">No</label>
+                    <label for="updated_maybe" class="radio"><input type="radio" name="feature[updated_regularly]" id="updated_maybe" value="Maybe">Maybe</label>
                 </div>
             </div>
             <div class="columns">
                 <div class="field column">
                     <label class="label">Would you like us to update your site or would you like to be responsible for updates?</label>
-                    <label for="responsible_update_us" class="radio"><input type="radio" name="feature[responsible_update][]" id="responsible_update_us" value="Update my site for me">Update my site for me</label>
-                    <label for="responsible_update_me" class="radio"><input type="radio" name="feature[responsible_update][]" id="responsible_update_me" value="I'll do my own updates">I'll do my own updates</label>
+                    <label for="responsible_update_us" class="radio"><input type="radio" name="feature[responsible_update]" id="responsible_update_us" value="Update my site for me">Update my site for me</label>
+                    <label for="responsible_update_me" class="radio"><input type="radio" name="feature[responsible_update]" id="responsible_update_me" value="I'll do my own updates">I'll do my own updates</label>
                 </div>
             </div>
             <div class="columns">
                 <div class="field column">
                     <label for="comments" class="label">Any additional comments are welcomed:</label>
-                    <div class="control"><textarea name="feature[additional_comments][]" id="comments" class="textarea"></textarea></div>
+                    <div class="control"><textarea name="feature[additional_comments]" id="comments" class="textarea"></textarea></div>
                 </div>
             </div>
         </fieldset>

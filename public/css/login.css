@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #272e31;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-body {
+    width: 50vmin;
+}
+
+form.form.login {
+    position: relative;
+    display: block;
+}
+
+form.form.login a {
+
+    display: block;
+    position: relative;
+    margin-bottom: 5vmin;
+
+}
+
+form.form.login a > img {
+
+    display: block;
+    position: relative;
+    width: 100%;
+
+}
+
+.form_section {
+    margin: 12px 0;
+    position: relative;
+    display: block;
+}
+
+label.label {
+    position: absolute;
+    padding: 0 5px;
+    margin-left: 5px;
+    color: #9297a0;
+    z-index: -999;
+    transform: translateY(0px);
+    bottom: 30%;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #416eb4;
+    padding: 20px 10px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #90acd9;
+    outline: 0;
+}
+
+label.stay {
+  -webkit-transform: translateY(-30px);
+  -moz-transform: translateY(-30px);
+  -o-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px) scale(0.90);
+  color: #90acd9;
+  background: #272e31;
+  z-index: 999;
+  transition: transform 0.25s ease;
+}
+
+label.original {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  transition: transform 0.25s ease;
+}
+
+input:focus + label.label {
+    color: #90acd9;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px) scale(0.90);
+    background: #272e31;
+    z-index: 999;
+    transition: transform 0.25s ease;
+}
+
+input[type="submit"] {
+    padding: 20px 8px;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #416eb4;
+    font-size: calc(12px + (12vmin * ( 1.08 / 12)));
+}
+
+input[type="submit"]:hover {
+    background: #276f8e;
+    border: 1px solid #276f8e;
+    transition: all 0.175s ease;
+    cursor: pointer;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    width: 100%;
+    background: red;
+    border: 1px solid #416eb4;
+    padding: 20px 10px;
+    color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+
+    .login-body {
+        width: 80vmin;
+    }
+
+}

@@ -11,5 +11,23 @@
 |
 */
 
+Auth::routes();
+
+//Route::get('/', 'HomeController@index')->name('home');
+
 Route::get('/', 'QuestionnaireController@index');
+Route::get('/home', 'QuestionnaireController@index');
 Route::post('/questionnaire_send', 'QuestionnaireController@store');
+Route::view('/sample', 'sample');
+
+//Admin Backend
+Route::middleware(['isadmin'])->group(function () {
+
+    Route::prefix('admin')->group(function () {
+
+        Route::get('/','QuestionnaireController@show');
+        Route::get('view_table/{id}','QuestionnaireController@single')->name('single');
+
+    });
+
+});

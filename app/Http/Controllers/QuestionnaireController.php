@@ -17,6 +17,14 @@ class QuestionnaireController extends Controller
         return view('questionnaire');
     }
 
+    public function single(Questionnaire $questionnaire, $id) {
+
+        $single = $questionnaire->find($id);
+
+        return view('single.display', compact('single'));
+
+    }
+
     /**
      * Show the form for creating a new resource
      *
@@ -65,21 +73,25 @@ class QuestionnaireController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Questionaire  $questionaire
+     * @param  \App\Questionnaire  $questionnaire
      * @return \Illuminate\Http\Response
      */
-    public function show(Questionaire $questionaire)
+    public function show(Questionnaire $questionnaire)
     {
-        //
+        
+        $questionnaires = Questionnaire::orderBy('created_at','DESC')->paginate(10);
+
+        return view('table.table', compact('questionnaires'));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Questionaire  $questionaire
+     * @param  \App\Questionnaire  $questionnaire
      * @return \Illuminate\Http\Response
      */
-    public function edit(Questionaire $questionaire)
+    public function edit(Questionnaire $questionnaire)
     {
         //
     }
@@ -88,10 +100,10 @@ class QuestionnaireController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Questionaire  $questionaire
+     * @param  \App\Questionnaire  $questionnaire
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Questionaire $questionaire)
+    public function update(Request $request, Questionnaire $questionnaire)
     {
         //
     }
@@ -99,10 +111,10 @@ class QuestionnaireController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Questionaire  $questionaire
+     * @param  \App\Questionnaire  $questionnaire
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Questionaire $questionaire)
+    public function destroy(Questionnaire $questionnaire)
     {
         //
     }
