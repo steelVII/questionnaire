@@ -25,9 +25,9 @@ class CreateQuestionnairesTable extends Migration
             $table->string('design_theme');
             $table->string('design_colors');
             $table->string('design_lookandfeel');
-            $table->string('design_ref')->nullable();
-            $table->string('target_audience_info')->nullable();
-            $table->string('feature')->nullable();
+            $table->text('design_ref')->nullable();
+            $table->text('target_audience_info')->nullable();
+            $table->text('feature')->nullable();
             $table->timestamps();
         });
     }
