@@ -25,7 +25,7 @@ Route::middleware(['isadmin'])->group(function () {
 
     Route::prefix('admin')->group(function () {
 
-        Route::get('/','QuestionnaireController@show');
+        Route::get('/','QuestionnaireController@show')->name('questionnaires');
         Route::get('view_table/{id}','QuestionnaireController@single')->name('single');
 
     });

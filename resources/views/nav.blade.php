@@ -12,24 +12,29 @@
           
         </div>
 
-        @if (Auth::check() && Auth::user()->acc_type == '1') 
-
             <div class="navbar-end">
 
                 <div class="navbar-item is-right">
 
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-        
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+                   <a class="navbar-item" href="{{ url('/') }}">Home</a>
+
+                    @if (Auth::check() && Auth::user()->acc_type == '1')
+
+                      <a class="navbar-item" href="{{ route('questionnaires') }}">View Questionnaires</a>
+
+                      <a class="navbar-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                      </a>
+          
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+
+                    @endif 
         
                 </div>
             </div>
 
-        @endif 
 </nav>
