@@ -28,6 +28,8 @@ class CreateQuestionnairesTable extends Migration
             $table->text('design_ref')->nullable();
             $table->text('target_audience_info')->nullable();
             $table->text('feature')->nullable();
+            $table->text('web_app')->nullable();
+            $table->string('in_charge')->nullable();
             $table->timestamps();
         });
     }

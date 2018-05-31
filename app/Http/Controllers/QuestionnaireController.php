@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Questionnaire;
+use App\Mail\QuestionnaireSubmitted;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class QuestionnaireController extends Controller
 {
@@ -41,14 +43,14 @@ class QuestionnaireController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Questionnaire $questionnaire,Request $request)
     {
-
+        //dd($request->managing);
         $endoded_designs = json_encode($request->design_ref);
         $encoded_target_audience = json_encode($request->audience);
         $encoded_feature = json_encode($request->feature);
 
-        Questionnaire::create([
+        $test = Questionnaire::create([
 
             'name' => $request->basic_name,
             'organization' => $request->basic_organization,
@@ -62,9 +64,33 @@ class QuestionnaireController extends Controller
             'design_lookandfeel' => $request->design_lookandfeel,
             'design_ref' => $endoded_designs,
             'target_audience_info' => $encoded_target_audience,
-            'feature' => $encoded_feature
+            'feature' => $encoded_feature,
+            'web_app' => $request->web_app,
+            'in_charge' => $request->managing
 
         ]);
+
+        if($request->managing == "Nic") {
+
+            $email= 'nictee@naxpansion.com';
+
+        }
+
+        else if($request->managing == "Leo") {
+
+            $email= 'leo@naxpansion.com';
+
+        }
+
+        else if($request->managing == "Elmo") {
+
+            $email= 'elmo@naxpansion.com';
+
+        }
+
+        $single = $questionnaire->find($test->id);
+
+        Mail::to($email)->send(new QuestionnaireSubmitted($single));
 
         return back();
 

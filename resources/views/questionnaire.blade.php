@@ -264,6 +264,33 @@
                 </div>
             </div>
         </fieldset>
+
+        <hr>
+
+        <fieldset>
+            <legend class="title">Web Application</legend>
+            <div class="columns">
+                <div class="field column">
+                    <label for="" class="label">Please describe your web application.</label>
+                    <div class="control"><textarea name="web_app" id="" class="textarea"></textarea></div>
+                </div>
+            </div>
+        </fieldset>
+
+        <hr>
+
+        <fieldset>
+            <legend class="title">Person in Charge</legend>
+            <div class="columns">
+                <div class="field column">
+                    <label class="label">Please select the person who will be managing this project.</label>
+                    <label for="managing_nic" class="radio"><input type="radio" name="managing" id="managing_nic" value="Nic">Nic</label>
+                    <label for="managing_leo" class="radio"><input type="radio" name="managing" id="managing_leo" value="Leo">Leo</label>
+                    <label for="managing_elmo" class="radio"><input type="radio" name="managing" id="managing_elmo" value="Elmo">Elmo</label>
+                </div>
+            </div>
+        </fieldset>
+
         <div class="columns">
             <div class="column is-half is-offset-one-quarter has-text-centered">
                 <h2 class="title">Thank you for your time!</h2>
