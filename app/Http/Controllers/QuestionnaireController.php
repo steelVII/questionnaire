@@ -90,6 +90,12 @@ class QuestionnaireController extends Controller
 
         }
 
+        else {
+
+            $email = 'support@naxpansion.com';
+
+        }
+
         $single = $questionnaire->find($test->id);
 
         Mail::to($email)->send(new QuestionnaireSubmitted($single));
