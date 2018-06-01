@@ -92,7 +92,7 @@ class QuestionnaireController extends Controller
 
         $single = $questionnaire->find($test->id);
 
-        Mail::to('jlks94@gmail.com')->send(new QuestionnaireSubmitted($single));
+        Mail::to($email)->send(new QuestionnaireSubmitted($single));
 
         return back();
 
