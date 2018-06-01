@@ -44,7 +44,7 @@
             <div class="columns">
                     <div class="column">
                         <h5 class="has-text-weight-semibold"><i class="fas fa-globe"></i> Url</h5>
-                        <a href="{{ $single->url }}">{{ $single->url }}</a>
+                        <a href="http://{{ $single->url }}">{{ $single->url }}</a>
                     </div>
                     <div class="column is-three-quarters">
                         <h5 class="has-text-weight-semibold"><i class="fas fa-sticky-note"></i> Company Description</h5>
@@ -199,29 +199,30 @@
                     <h5 class="has-text-weight-semibold"><i class="fas fa-fire"></i> Basic</h5>
 
                     <p>
-
-                        @php 
+                        @if (isset($features->basic))
+                            @php 
+                                
+                                $len = count($features->basic); 
+                                $i = 0;
+                                
+                            @endphp
                             
-                            $len = count($features->basic); 
-                            $i = 0;
-                            
-                        @endphp
-                        
-                        @foreach ($features->basic as $item)
+                            @foreach ($features->basic as $item)
 
-                            @if ($i == $len - 1)
+                                @if ($i == $len - 1)
 
-                            {{ $item }}
+                                {{ $item }}
 
-                            @else
+                                @else
 
-                            {{ $item }},
+                                {{ $item }},
 
-                            @endif
+                                @endif
 
-                            @php $i++; @endphp
-                            
-                        @endforeach
+                                @php $i++; @endphp
+                                
+                            @endforeach
+                        @endif
                     
                     </p>
                 </div>
@@ -234,30 +235,30 @@
                         <h5 class="has-text-weight-semibold"><i class="fas fa-magic"></i> Special</h5>
     
                         <p>
-    
-                            @php 
-                                
-                                $len = count($features->special); 
-                                $i = 0;
-                                
+                            @if (isset($features->special))
+                                @php 
+                                    
+                                    $len = count($features->special); 
+                                    $i = 0;
+                                    
                                 @endphp
-                            
-                            @foreach ($features->special as $item)
-    
-                                @if ($i == $len - 1)
-    
-                                {{ $item }}
-    
-                                @else
-    
-                                {{ $item }},
-    
-                                @endif
-    
-                                @php $i++; @endphp
                                 
-                            @endforeach
-                        
+                                @foreach ($features->special as $item)
+        
+                                    @if ($i == $len - 1)
+        
+                                    {{ $item }}
+        
+                                    @else
+        
+                                    {{ $item }},
+        
+                                    @endif
+        
+                                    @php $i++; @endphp
+                                    
+                                @endforeach
+                             @endif
                         </p>
                     </div>
             
@@ -305,11 +306,19 @@
                     </div>
                     <div class="column">
                         <h5 class="has-text-weight-semibold"><i class="fas fa-clock"></i> Updated Regularly</h5>
-                        <p>{{ $features->updated_regularly }}</p>
+                        <p>
+                            @if (isset($features->updated_regularly))
+                                {{ $features->updated_regularly }}
+                            @endif
+                        </p>
                     </div>
                     <div class="column">
                         <h5 class="has-text-weight-semibold"><i class="fas fa-puzzle-piece"></i> Responsibility</h5>
-                        <p>{{ $features->responsible_update }}</p>
+                        <p>
+                            @if (isset($features->responsible_update))
+                                {{ $features->responsible_update }}
+                            @endif
+                        </p>
                     </div>
                 </div>
 

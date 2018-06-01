@@ -15,16 +15,16 @@ class CreateQuestionnairesTable extends Migration
     {
         Schema::create('questionnaires', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('organization');
-            $table->string('email')->unique();
-            $table->integer('phone_number');
-            $table->string('url');
-            $table->string('company_description');
-            $table->string('redesign_logo');
-            $table->string('design_theme');
-            $table->string('design_colors');
-            $table->string('design_lookandfeel');
+            $table->string('name')->nullable();
+            $table->string('organization')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->integer('phone_number')->nullable();
+            $table->string('url')->nullable();
+            $table->string('company_description')->nullable();
+            $table->string('redesign_logo')->nullable();
+            $table->string('design_theme')->nullable();
+            $table->string('design_colors')->nullable();
+            $table->string('design_lookandfeel')->nullable();
             $table->text('design_ref')->nullable();
             $table->text('target_audience_info')->nullable();
             $table->text('feature')->nullable();

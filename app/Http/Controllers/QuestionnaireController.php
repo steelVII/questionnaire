@@ -50,6 +50,8 @@ class QuestionnaireController extends Controller
         $encoded_target_audience = json_encode($request->audience);
         $encoded_feature = json_encode($request->feature);
 
+        //dd($encoded_feature);
+
         $test = Questionnaire::create([
 
             'name' => $request->basic_name,
@@ -90,7 +92,7 @@ class QuestionnaireController extends Controller
 
         $single = $questionnaire->find($test->id);
 
-        Mail::to($email)->send(new QuestionnaireSubmitted($single));
+        Mail::to('jlks94@gmail.com')->send(new QuestionnaireSubmitted($single));
 
         return back();
 
